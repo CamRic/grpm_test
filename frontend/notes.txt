@@ -1,0 +1,12 @@
+
+couleur notif
+(historic)
+
+! donees renvoyees securité
+! wcag + owasp
+
+! repos commun
+! TEST CLONE :
+
+! PLAN PRESENTATION
+
