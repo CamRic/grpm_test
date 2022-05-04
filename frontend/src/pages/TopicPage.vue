@@ -6,7 +6,6 @@
 
 <script>
 import { useRouter } from "vue-router";
-import { api } from "src/boot/axios";
 import { useTopicStore } from "src/pinia/topic.store";
 import TopicView from "src/components/TopicView.vue";
 
@@ -25,18 +24,8 @@ export default {
     };
   },
 
-  created(data) {
-    if (!this.topicStore.isLoaded) {
-      this.topicStore
-        .retrieveTopicData(this.topicId)
-        .then((res) => {
-          console.log(res);
-          console.log(this.topicStore.topicObject);
-        })
-        .catch((err) => console.log(err));
-    } else {
-      console.log("topic data already loaded");
-    }
+  created() {
+    this.topicStore.retrieveTopicData(this.topicId);
   },
 
   watch: {

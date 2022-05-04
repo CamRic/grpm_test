@@ -1,14 +1,14 @@
 <template>
-  <q-card class="post-qcard q-my-md q-pa-md">
+  <q-card class="post-qcard q-my-md q-px-md q-py-sm bg-grey-2">
     <div class="post-qcard__header">
-      <h6 class="q-my-sm q-pl-lg">{{ author }}</h6>
+      <h6 class="q-my-sm q-pl-md">{{ author }}</h6>
     </div>
-    <q-separator size="2px" />
-    <div class="post-qcard__body q-ma-sm">
+    <!-- <q-separator size="2px" /> -->
+    <q-card class="post-qcard__body q-my-sm q-mx-md q-pa-md" bordered>
       {{ body }}
-    </div>
-    <q-separator class="q-mt-md" size="2px" />
-    <div class="flex row justify-between items-center q-mx-md">
+    </q-card>
+    <!-- <q-separator class="q-mt-md" size="2px" /> -->
+    <div class="flex row justify-between items-center q-mx-md q-my-sm">
       <p class="q-my-sm">
         {{ createdAt.split("T").join(" ").substring(0, 19) }}
       </p>
@@ -71,6 +71,7 @@ export default {
             spinner: true,
             message: "Suppression du message...",
             timeout: 1500,
+            color: "warning",
           });
           this.$emit("deleted");
         });
@@ -102,6 +103,12 @@ export default {
             )
             .then((res) => {
               this.$emit("deleted");
+              this.$q.notify({
+                spinner: true,
+                message: "Envoi du message...",
+                timeout: 2000,
+                color: "info",
+              });
             })
             .catch((err) => console.log(err));
         });
