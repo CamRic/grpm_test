@@ -1,5 +1,4 @@
 
-! secret
 (historic)
 
 ! donees renvoyees securité
@@ -9,7 +8,7 @@
 ! TEST CLONE :
 
 ! PLAN PRESENTATION
-! doc api
+(! doc api)
 ! README.MD
 
 
