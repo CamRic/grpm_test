@@ -1,15 +1,6 @@
 
-(historic)
 
-! donees renvoyees securité
-! wcag + owasp
-
-! repos commun
-! TEST CLONE :
-
-! PLAN PRESENTATION
-(! doc api)
-! README.MD
+! README.MD => bdd
 
 
 
@@ -20,6 +11,7 @@
   - outils utilisés:
     * frontend: vuejs (spa), quasar (framework), axios (appels api), pinia (store)
     * backend: node + express (création du server), bcrypt (hash), jwt, sequelize (requete + models bdd), multer (images),
+    * bdd: mysql
 
 => presentation de l'application (8min)
   - création de compte (avec erreur),
